@@ -6,8 +6,9 @@ import StartCoursesImg from "../../utils/images/start-courses-img.jpg";
 import FaqAccordion from "../../components/FaqAccordion/FaqAccordion";
 import BackgroundSlideshow from "./BackgroundSlideshow";
 import { useLocation } from "react-router-dom";
+import SocialImageSlider from "./SocialImageSlider";
 
-const homePageImages = [
+const socialImages  = [
   require("../../utils/images/1.jpg"),
   require("../../utils/images/2.jpg"),
   require("../../utils/images/3.jpg"),
@@ -23,6 +24,12 @@ const homePageImages = [
 
 ];
 
+
+const homePageImages = [
+  require("../../utils/images/home-page-header1.jpeg"),
+  require("../../utils/images/home-page-header2.jpeg"),
+  require("../../utils/images/home-page-header3.jpeg"),
+];
 function Home() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
@@ -30,7 +37,25 @@ function Home() {
     <div className="home-page">
       {/* Background Slideshow Component */}
       <BackgroundSlideshow images={homePageImages} className="header h-100 min-vh-100 d-flex align-items-center text-light">
-      {/* <div className="container d-flex flex-column align-items-center mt-5">
+      <div className="container d-flex flex-column align-items-center mt-5">
+          <h2>Welcome To</h2>
+          <h1 className="text-center fw-semibold">Marine Boost</h1>
+          <p>
+            At Marine Boost, we go beyond traditional digital marketing—we craft tailored strategies that drive real growth.
+            Specializing in e-commerce, we leverage data-driven insights, innovative campaigns, and performance-focused solutions to
+            help brands thrive in the digital space.
+          </p>
+          <div className="d-flex flex-column flex-sm-row align-items-center">
+            <Link to="/courses">
+              <button type="button" className="btn btn-danger btn-lg mx-0 mx-sm-2 my-2 my-sm-0">Our Services</button>
+            </Link>
+            <Link to="/contact">
+              <button type="button" className="btn btn-dark btn-lg mx-0 mx-sm-2 my-2 my-sm-0">Contact Us</button>
+            </Link>
+          </div>
+        </div>
+      </BackgroundSlideshow>
+   {/* <div className="container d-flex flex-column align-items-center mt-5">
           <h2>Welcome To</h2>
           <h1 className="text-center fw-semibold">Marine Boost</h1>
           <p>
@@ -47,24 +72,9 @@ function Home() {
             </Link>
           </div>
         </div> */}
-      </BackgroundSlideshow>
-   <div className="container d-flex flex-column align-items-center mt-5">
-          <h2>Welcome To</h2>
-          <h1 className="text-center fw-semibold">Marine Boost</h1>
-          <p>
-            At Marine Boost, we go beyond traditional digital marketing—we craft tailored strategies that drive real growth.
-            Specializing in e-commerce, we leverage data-driven insights, innovative campaigns, and performance-focused solutions to
-            help brands thrive in the digital space.
-          </p>
-          <div className="d-flex flex-column flex-sm-row align-items-center">
-            <Link to="/courses">
-              <button type="button" className="btn btn-danger btn-lg mx-0 mx-sm-2 my-2 my-sm-0">Our Services</button>
-            </Link>
-            <Link to="/contact">
-              <button type="button" className="btn btn-outline-dark btn-lg mx-0 mx-sm-2 my-2 my-sm-0">Contact Us</button>
-            </Link>
-          </div>
-        </div>
+
+<SocialImageSlider images={socialImages}  />
+
       <div className="py-5">
         <ChooseSection />
       </div>

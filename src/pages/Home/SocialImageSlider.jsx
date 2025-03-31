@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const BackgroundSlideshow = ({ images, children }) => {
+const SocialImageSlider = ({ images }) => {
   const [index, setIndex] = useState(0);
 
   // Auto change slides every 4 seconds
@@ -28,27 +28,27 @@ const BackgroundSlideshow = ({ images, children }) => {
   };
 
   return (
-    <header
-      className="home-page header"
+    <section
+      className="social-slider"
       style={{
-        backgroundImage: `linear-gradient(rgba(5, 10, 35, 0.75), rgba(5, 10, 35, 0.75)), url(${images[index]})`,
+        backgroundImage: `url(${images[index]})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "80vh",
+        height: "50vh",
         transition: "background-image 0.8s ease-in-out",
         position: "relative",
+        marginTop:"5%"
       }}
     >
-      {children}
-
-
-      {/* <button className="arrow left-arrow" onClick={handlePrev}>
+      {/* Left Arrow */}
+      <button className="arrow left-arrow" onClick={handlePrev}>
         <FaArrowLeft />
       </button>
 
+      {/* Right Arrow */}
       <button className="arrow right-arrow" onClick={handleNext}>
         <FaArrowRight />
-      </button> */}
+      </button>
 
       <div className="dots-container">
         {images.map((_, i) => (
@@ -59,8 +59,8 @@ const BackgroundSlideshow = ({ images, children }) => {
           ></span>
         ))}
       </div>
-    </header>
+    </section>
   );
 };
 
-export default BackgroundSlideshow;
+export default SocialImageSlider;
