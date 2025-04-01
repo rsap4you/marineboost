@@ -5,10 +5,10 @@ import ArtCourseImg from '../../utils/images/art-course.jpg';
 import BusinessCourseImg from '../../utils/images/business-course.jpg';
 import ComputerScienceCourseImg from '../../utils/images/computer-science-course.jpg';
 import EducationCourseImg from '../../utils/images/education-course.jpg';
-import HealthcareCourseImg from '../../utils/images/healthcare-course.jpg';
-import LawCourseImg from '../../utils/images/law-course.jpg';
+import HealthcareCourseImg from '../../utils/images/digital_marketing_services.webp';
+import LawCourseImg from '../../utils/images/content_marketing_services.webp';
 import MusicCourseImg from '../../utils/images/music-course.jpg';
-import SportCourseImg from '../../utils/images/sport-course.jpg';
+import SportCourseImg from '../../utils/images/e-commerce-marketing.webp';
 import FaqAccordion from '../../components/FaqAccordion/FaqAccordion';
 
 const courses = [
